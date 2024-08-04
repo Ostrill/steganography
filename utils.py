@@ -103,9 +103,9 @@ def hide(source_img,
     return result_img
 
 
-def unhide(image, 
-           save_as=None, 
-           visibility=2):
+def extract(image, 
+            save_as=None, 
+            visibility=2):
     """
     Exctract hidden image from given image
 
@@ -126,7 +126,7 @@ def unhide(image,
     error = 'visibility must be int from 1 to 7!'
     assert visibility in [*range(1, 8)], error
     
-    # Open and unhide
+    # Open and extract secret image
     hidden = np.array(open_img(image)) << (8 - visibility)
     hidden_img = Image.fromarray(hidden)
 
