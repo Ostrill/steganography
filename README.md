@@ -11,7 +11,7 @@ This repository presents a simple way to hide a secret image inside another imag
 
 ![hiding](assets/EN_hiding.png)
 
-As you can see, the result (the image on the right) is almost identical to the original image. However, there is a secret image encrypted inside that can be extracted:
+As you can see, the result (the image on the right) is almost identical to the source image. However, there is a secret image encrypted inside that can be extracted:
 
 ![unhiding](assets/EN_extracting.png)
 
