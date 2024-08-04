@@ -61,8 +61,28 @@ def hide(source_img,
          secret_img, 
          save_as=None, 
          visibility=2):
+    """
+    Hide secret image inside source image
+
+    PARAMETERS
+    ----------
+    source_img : str or PIL.Image.Image
+        path to source image (or PIL Image object)
+        
+    secret_img : str or PIL.Image.Image
+        path to secret image (or PIL Image object)
+        
+    save_as : str or None
+        path to save the result (if None, the 
+        result will not be saved)
+        
+    visibility : int from 1 to 7
+        how many low-order bits will be occupied 
+        by the secret image
+    """
     # Check visibility value
-    assert visibility in [*range(1, 8)], 'visibility must be int from 1 to 7!'
+    error = 'visibility must be int from 1 to 7!'
+    assert visibility in [*range(1, 8)], error
     
     # Loading images
     source = open_img(source_img)
@@ -86,8 +106,25 @@ def hide(source_img,
 def unhide(image, 
            save_as=None, 
            visibility=2):
+    """
+    Exctract hidden image from given image
+
+    PARAMETERS
+    --–-------
+    image : str or PIL.Image.Image
+        path to image (or PIL Image object)
+        
+    save_as : str or None
+        path to save the result (if None, the 
+        result will not be saved)
+        
+    visibility : int from 1 to 7
+        how many low-order bits will be occupied 
+        by the secret image
+    """
     # Check visibility value
-    assert visibility in [*range(1, 8)], 'visibility must be int from 1 to 7!'
+    error = 'visibility must be int from 1 to 7!'
+    assert visibility in [*range(1, 8)], error
     
     # Open and unhide
     hidden = np.array(open_img(image)) << (8 - visibility)
@@ -100,3 +137,4 @@ def unhide(image,
         print(f'The result was saved in {filename}')
 
     return hidden_img
+    
