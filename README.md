@@ -49,11 +49,11 @@ from utils import hide, extract
 hide(source_img='source.jpg', # path to source image
      secret_img='secret.jpg', # path to image you want to hide
      save_as='result.png',    # path to save the result
-     visibility=2):           # number of bits for secret image
+     visibility=2)            # number of bits for secret image
 
 extract(image='result.png',      # path to image with secret
         save_as='extracted.jpg', # path to save extracted image
-        visibility=2):           # number of bits for secret image
+        visibility=2)            # number of bits for secret image
 ```
 
 > Note that for saving images with hidden secret it is better to use extensions that compress images little or not at all. Otherwise the hidden image will be impossible to extract! <br>
