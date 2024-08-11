@@ -57,5 +57,5 @@ extract(image='result.png',      # path to image with secret
 ```
 
 > Note that for saving images with hidden secret it is better to use extensions that compress images little or not at all. Otherwise the hidden image will be impossible to extract! <br>
-:green_circle: Recommended extensions: <kbd>.png</kbd>, <kbd>.bmp</kbd>, <kbd>.tiff</kbd>, <kbd>.tif</kbd>.<br>
-:red_circle: Сategorically not recommended: <kbd>.jpg</kbd>, <kbd>.jpeg</kbd>, <kbd>.gif</kbd>, <kbd>.webp</kbd>, <kbd>.ico</kbd>.
+$\color{Green}\large{\bullet}$ Recommended extensions: <kbd>.png</kbd>, <kbd>.bmp</kbd>, <kbd>.tiff</kbd>, <kbd>.tif</kbd>.<br>
+$\color{Red}\large{\bullet}$ Сategorically not recommended: <kbd>.jpg</kbd>, <kbd>.jpeg</kbd>, <kbd>.gif</kbd>, <kbd>.webp</kbd>, <kbd>.ico</kbd>.
